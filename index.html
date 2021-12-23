@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Zack Greenfields Innovative Work Day Scheduler</title>
   </head>
 
@@ -28,68 +28,79 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    
+    <!-- credit to https://github.com/mlportu/workday-scheduler/blob/master/index.html for the i tags-->
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row time-block">
         <div class="col-2 hour">9 AM</div>
-        <div class="col-9" id="task-9am"></div>
-          <p id="task-content-1"></p>
+        <div class="col-9 taskBin" id="task-9">
+          <p id="task-content-0"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">10 AM</div>
-        <div class="col-9" id="task-10am"></div>
-          <p id="task-content-2"></p>
+        <div class="col-9 taskBin" id="task-10">
+          <p id="task-content-1"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">11 AM</div>
-        <div class="col-9" id="task-11am"></div>
-          <p id="task-content-3"></p>
+        <div class="col-9 taskBin" id="task-11">
+          <p id="task-content-2"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">12 PM</div>
-        <div class="col-9" id="task-12pm"></div>
-          <p id="task-content-4"></p>
+        <div class="col-9 taskBin" id="task-12">
+          <p id="task-content-3"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
           
       <div class="row time-block">
         <div class="col-2 hour">1 PM</div>
-        <div class="col-9" id="task-1pm"></div>
-          <p id="task-content-5"></p>
+        <div class="col-9 taskBin" id="task-13">
+          <p id="task-content-4"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">2 PM</div>
-        <div class="col-9" id="task-2pm"></div>
-          <p id="task-content 6"></p>
+        <div class="col-9 taskBin" id="task-14">
+          <p id="task-content-5"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">3 PM</div>
-        <div class="col-9" id="task-3pm"></div>
-          <p id="task-content 7"></p>
+        <div class="col-9 taskBin" id="task-15">
+          <p id="task-content-6"></p>
+        </div>
         <button class="col-1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">4 PM</div>
-        <div class="col-9" id="task-4pm"></div>
-          <p id="task-content 8"></p>
+        <div class="col-9 taskBin" id="task-16">
+          <p id="task-content-7"></p>
+        </div>
         <button class="col 1 saveBtn" id="save-btn">save</button>
       </div>
 
       <div class="row time-block">
         <div class="col-2 hour">5 PM</div>
-        <div class="col-9" id="task-5pm"></div>
-          <p id="task-content 9"></p>
+        <div class="col-9 taskBin" id="task-17">
+          <p id="task-content-8"></p>
+        </div>
         <button class="col 1 saveBtn" id="save-btn">save</button>
       </div>
     </div>
@@ -97,6 +108,6 @@
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

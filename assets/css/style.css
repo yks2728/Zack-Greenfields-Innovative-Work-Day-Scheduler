@@ -13,6 +13,10 @@ textarea{
   padding: 10px;
 }
 
+p {
+  height: 90%;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -21,9 +25,14 @@ textarea{
   border-bottom: 10px solid black;
 }
 
-.description{
+/* credit to https://github.com/mlportu/workday-scheduler/blob/master/assets/style.css */
+
+/* .description{
   white-space: pre-wrap;
-}
+} */
+
+/* end credit */
+
 
 .time-block{
   text-align: center;
@@ -31,7 +40,6 @@ textarea{
 }
 
 .row {
-  white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
 }
@@ -54,7 +62,7 @@ textarea{
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
