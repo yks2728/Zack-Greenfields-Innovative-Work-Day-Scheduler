@@ -70,9 +70,9 @@ $(".saveBtn").on("click", function(){
 });
 
 setInterval(function(){
-    hourAudit();},1000*60*60);
+    hourAudit();
+}, 1000*60*60);
 
 loadTasks();
 hourAudit();
 // end of credit
-e.preventDefault();
