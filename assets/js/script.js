@@ -1,25 +1,57 @@
-// credit to https://github.com/mlportu/workday-scheduler/blob/master/assets/script.js for the functions
+// credit to https://github.com/mlportu/workday-scheduler/blob/master/assets/script.js for the array
 
 tasks = [];
 
-// load tasks
-var loadTasks = function () {
-  tasks = JSON.parse(localStorage.getItem("tasks"));
-  if (!tasks) {
-    tasks = {};
-  }
-  printTasks(tasks);
-};
+// end credit
 
-var printTasks = function () {
-  $.each(tasks, function (list, arr) {
-    var taskP = $("<p>")
-      .addClass("description task-content-" + list)
-      .text(arr);
+var task9 = document.getElementById("task-9")
+var task10 = document.getElementById("task-10")
+var task11 = document.getElementById("task-11")
+var task12 = document.getElementById("task-12")
+var task13 = document.getElementById("task-13")
+var task14 = document.getElementById("task-14")
+var task15 = document.getElementById("task-15")
+var task16 = document.getElementById("task-16")
+var task17 = document.getElementById("task-17")
 
-    $("task-content-" + list).replaceWith(taskP);
-  });
-};
+
+if (localStorage.getItem("task-9")) {
+  task9.textContent = localStorage.getItem("task-9");
+}
+
+if (localStorage.getItem("task-10")) {
+  task10.textContent = localStorage.getItem("task-10");
+}
+
+if (localStorage.getItem("task-11")) {
+  task11.textContent = localStorage.getItem("task-11");
+}
+
+if (localStorage.getItem("task-12")) {
+  task12.textContent = localStorage.getItem("task-12");
+}
+
+if (localStorage.getItem("task-13")) {
+  task13.textContent = localStorage.getItem("task-13");
+}
+
+if (localStorage.getItem("task-14")) {
+  task14.textContent = localStorage.getItem("task-14");
+}
+
+if (localStorage.getItem("task-15")) {
+  task15.textContent = localStorage.getItem("task-15");
+}
+
+if (localStorage.getItem("task-16")) {
+  task16.textContent = localStorage.getItem("task-16");
+}
+
+if (localStorage.getItem("task-17")) {
+  task17.textContent = localStorage.getItem("task-17");
+}
+
+// credit to https://github.com/mlportu/workday-scheduler/blob/master/assets/script.js for the functions
 
 var Today = moment().format("MMMM D, YYYY");
     $("#currentDay").text(Today);
@@ -49,7 +81,7 @@ $(".taskBin").on("click", "p", function () {
   textInput.trigger("focus");
 });
 
-// Task needs to be updated
+// // Task needs to be updated
 $(".taskBin").on("blur", "textarea", function () {
   // get the text areas; current value/text
   var text = $(this).val().trim();
@@ -60,17 +92,15 @@ $(".taskBin").on("blur", "textarea", function () {
   $(this).replaceWith(taskP);
 });
 
+// end credit
+
 // save tasks
-$(".saveBtn").on("click", function () {
-  var index = $("saveBtn").index(this);
-  tasks[index] = $(this).parent().find(".taskContent").text();
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+$(".saveBtn").on("click", function (event) {
+  var innerText = event.target.parentElement.childNodes[3].innerText
+  var eventId = event.target.parentElement.childNodes[3].id
+  localStorage.setItem(eventId, JSON.stringify(innerText));
 });
 
-setInterval(function () {
-  hourAudit();
-}, 1000 * 60 * 60);
-
-loadTasks();
+// start credit
 hourAudit();
 // end of credit
