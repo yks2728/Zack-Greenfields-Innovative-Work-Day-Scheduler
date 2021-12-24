@@ -101,6 +101,6 @@ $(".saveBtn").on("click", function (event) {
   localStorage.setItem(eventId, JSON.stringify(innerText));
 });
 
-// start credit
+// start credit https://github.com/mlportu/workday-scheduler/blob/master/assets/script.js for the function
 hourAudit();
 // end of credit
